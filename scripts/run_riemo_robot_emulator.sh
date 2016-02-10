@@ -5,7 +5,7 @@ Q_INIT_CSV="0,0,0,0,0,0,0.69,0.69"
 ################################################################################
 
 RIEMO_ROBOT_TYPE=basic
-ROBOT_PACKAGE_NAME=nw_mico_client
+ROBOT_PACKAGE_NAME=nw_riemo_robots
 RIEMO_JSON_CONFIG=riemo_robot_mico.json
 
 
