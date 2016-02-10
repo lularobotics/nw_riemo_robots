@@ -1,13 +1,5 @@
 # Executes an LQR problem.
 
-X_TARGET_X=$1
-X_TARGET_Y=$2
-X_TARGET_Z=$3
-IS_FIRST=$4
-
-X_TARGET_CSV=$1,$2,$3
-Q_INIT_CSV="0,0,0,0,0,0,0.69,0.69"
-
 ################################################################################
 #-------------------------------------------------------------------------------
 # Problem specification constraint parameters
@@ -52,7 +44,7 @@ OBSTACLE_LINEARIZATION_CONSTRAINT_CSV=0.0,0.0,0.1,0.5
 ################################################################################
 
 RIEMO_ROBOT_TYPE=basic
-ROBOT_PACKAGE_NAME=nw_riemo_robots
+ROBOT_PACKAGE_NAME=nw_mico_client
 RIEMO_JSON_CONFIG=riemo_robot_mico.json
 
 CONTROL_DT=.01
@@ -113,8 +105,6 @@ POLICY_EXECUTION_START_TIME=0.
 
 rosrun riemo_programs riemo_move_basic_server \
   --verbose=true \
-  --q_init_csv=$Q_INIT_CSV \
-  --x_target_csv="$X_TARGET_CSV" \
   --use_upright_orientation_constraint=$USE_UPRIGHT_ORIENTATION_CONSTRAINT \
   --use_upright_orientation_constraint_end_only=$USE_UPRIGHT_ORIENTATION_CONSTRAINT_END_ONLY \
   --approach_constraint_csv=$APPROACH_CONSTRAINT_CSV \
