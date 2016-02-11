@@ -33,6 +33,10 @@
 #    box in 3-space through which the robot's end-effector should pass.
 #-------------------------------------------------------------------------------
 
+
+JOINT_STATE_TOPIC=joint_states
+JOINT_TRAJECTORY_TOPIC=joint_trajectory
+
 USE_UPRIGHT_ORIENTATION_CONSTRAINT=true
 USE_UPRIGHT_ORIENTATION_CONSTRAINT_END_ONLY=false
 APPROACH_CONSTRAINT_CSV=.5,1.,0.
@@ -104,6 +108,9 @@ DILATION_TIMES_CSV=-1.
 POLICY_EXECUTION_START_TIME=0.
 
 rosrun riemo_programs riemo_move_basic_server \
+  --joint_state_topic=$JOINT_STATE_TOPIC \
+  --joint_trajectory_topic=$JOINT_TRAJECTORY_TOPIC \
+  \
   --verbose=true \
   --use_upright_orientation_constraint=$USE_UPRIGHT_ORIENTATION_CONSTRAINT \
   --use_upright_orientation_constraint_end_only=$USE_UPRIGHT_ORIENTATION_CONSTRAINT_END_ONLY \
