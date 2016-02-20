@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Executes RieMO robot emulator 
 
 Q_INIT_CSV="0.790,0.054,-1.180,-1.012,1.755,-0.121,0.630,0.607"
