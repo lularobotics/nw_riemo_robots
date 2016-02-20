@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+  <include file="$(find nw_riemo_robots)/launch/riemo_mico_server.launch" />
+  <node name="riemo_robot_emulator" pkg="nw_riemo_robots" type="run_riemo_robot_emulator.sh" output="screen"/>
+</launch>
