@@ -9,9 +9,12 @@ dilation_times_csv: -1.
 policy_execution_start_time: 0.
 
 # Optimization
+max_optimization_cycles: 5
+terminal_term_tightening_scalar: 10.
+optimization_cycle_goal_thresh: .01
 inner_loop_optimizer_type: newton_adaptive_step_size
-interior_point_iterations: 1
-barrier_reduction_scalar: .3
+interior_point_iterations: 0
+barrier_reduction_scalar: .5
 maximum_outer_loop_iters: 25
 maximum_inner_loop_iters: 20
 gradient_norm_threshold: .01
@@ -46,8 +49,10 @@ base_heuristic_potential_scalar: .0
 cost_gradient_metric_scalar: 10000.
 cost_gradient_metric_alpha: 1.
 joint_barrier_scalar: .1
+joint_barrier_robustness_thresh: .001
 joint_barrier_margin: .0
 obstacle_barrier_scalar: 1.
+obstacle_barrier_robustness_thresh: .01
 obstacle_barrier_margin: .0
 grasp_hand_open_scalar: 100.
 include_floor_constraint: true
