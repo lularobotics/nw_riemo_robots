@@ -48,14 +48,22 @@ vertical_potential_scalar: 0.
 base_heuristic_potential_scalar: .0
 cost_gradient_metric_scalar: 10000.
 cost_gradient_metric_alpha: 1.
-joint_barrier_scalar: .1
+grasp_hand_open_scalar: 100.
+include_floor_constraint: true
+
+max_hessian: 10000.
+#joint_barrier_scalar: .1
+#joint_barrier_scalar: 10.
+joint_barrier_scalar: .001
+#joint_barrier_scalar: .000001
 joint_barrier_robustness_thresh: .001
 joint_barrier_margin: .0
 obstacle_barrier_scalar: 1.
+#obstacle_barrier_scalar: .01
+#obstacle_barrier_scalar: .1 # Working
+#obstacle_barrier_scalar: .00001
 obstacle_barrier_robustness_thresh: .01
 obstacle_barrier_margin: .0
-grasp_hand_open_scalar: 100.
-include_floor_constraint: true
 
 approach_standoff_distance: .1
 approach_standoff_time: 2.
