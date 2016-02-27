@@ -48,7 +48,8 @@ initial_task_velocity_term_scalar: 500.
 terminal_task_velocity_term_scalar: 2000.
 vertical_potential_scalar: 0.
 base_heuristic_potential_scalar: .0
-cost_gradient_metric_scalar: 10000.
+#cost_gradient_metric_scalar: 10000.
+cost_gradient_metric_scalar: 100000.
 #cost_gradient_metric_scalar: 0.
 cost_gradient_metric_alpha: 1.
 grasp_hand_open_scalar: 100.
@@ -78,6 +79,19 @@ self_collision_barrier_scalar: .001
 approach_standoff_distance: .1
 approach_standoff_time: 2.
 approach_velocity_scalar: 100.
+#approach_velocity_scalar: 1.
+
+pickup_time: 2.
+pickup_passthrough_height: .1
+pickup_passthrough_radius: .05
+pickup_passthrough_scalar: 100.
+pickup_passthrough_velocity_scalar: 1.
+
+putdown_time: 2.
+putdown_passthrough_height: .1
+putdown_passthrough_radius: .05
+putdown_passthrough_scalar: 100.
+putdown_passthrough_velocity_scalar: 1.
 
 #sphere_obstacle_constraint_csv: .5,0,.1,.15
 sphere_obstacle_constraint_csv: 0,-.5,.1,.15
