@@ -5,7 +5,7 @@
 
 RIEMO_ROBOT_TYPE=basic
 ROBOT_PACKAGE_NAME=nw_riemo_robots
-RIEMO_JSON_CONFIG=riemo_robot_mico.json
+RIEMO_JSON_CONFIG=riemo_robot_mico_nw.json
 
 JOINT_STATE_TOPIC=joint_states
 

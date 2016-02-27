@@ -1,7 +1,8 @@
 # RieMO problem
 apollo_riemo_robot_type: basic
 robot_package_name: nw_riemo_robots
-riemo_json_config: riemo_robot_mico.json
+#riemo_json_config: riemo_robot_mico.json
+riemo_json_config: riemo_robot_mico_nw.json
 T: 30
 dt: .2
 dilation_factors_csv: .5
@@ -10,6 +11,7 @@ policy_execution_start_time: 0.
 
 # Optimization
 max_optimization_cycles: 5
+#max_optimization_cycles: 1
 terminal_term_tightening_scalar: 10.
 optimization_cycle_goal_thresh: .01
 inner_loop_optimizer_type: newton_adaptive_step_size
@@ -41,12 +43,13 @@ joint_potential_scalar: 0.
 
 # Objective params
 posture_scalar: 10.
-terminal_term_scalar: 100000.
+terminal_term_scalar: 1000000.
 initial_task_velocity_term_scalar: 500.
 terminal_task_velocity_term_scalar: 2000.
 vertical_potential_scalar: 0.
 base_heuristic_potential_scalar: .0
 cost_gradient_metric_scalar: 10000.
+#cost_gradient_metric_scalar: 0.
 cost_gradient_metric_alpha: 1.
 grasp_hand_open_scalar: 100.
 include_floor_constraint: true
@@ -59,17 +62,25 @@ joint_barrier_scalar: .001
 joint_barrier_robustness_thresh: .001
 joint_barrier_margin: .0
 obstacle_barrier_scalar: 1.
+#obstacle_barrier_scalar: .001
 #obstacle_barrier_scalar: .01
 #obstacle_barrier_scalar: .1 # Working
 #obstacle_barrier_scalar: .00001
 obstacle_barrier_robustness_thresh: .01
 obstacle_barrier_margin: .0
 
+# These aren't actively used.
+self_collision_max_hessian: 10000.
+self_collision_chord_length1: .32
+self_collision_chord_length2: .40
+self_collision_barrier_scalar: .001
+
 approach_standoff_distance: .1
 approach_standoff_time: 2.
 approach_velocity_scalar: 100.
 
-sphere_obstacle_constraint_csv: .5,0,.1,.15
+#sphere_obstacle_constraint_csv: .5,0,.1,.15
+sphere_obstacle_constraint_csv: 0,-.5,.1,.15
 vel_thresh: 10.
 accel_thresh: 20.
 
