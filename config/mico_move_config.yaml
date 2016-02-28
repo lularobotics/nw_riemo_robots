@@ -81,17 +81,17 @@ approach_standoff_time: 2.
 approach_velocity_scalar: 100.
 #approach_velocity_scalar: 1.
 
-pickup_time: 2.
-pickup_passthrough_height: .1
-pickup_passthrough_radius: .05
-pickup_passthrough_scalar: 100.
-pickup_passthrough_velocity_scalar: 1.
+pickup_time: 1.5
+pickup_passthrough_height: .075
+pickup_passthrough_radius: .02
+pickup_passthrough_scalar: 50.
+pickup_passthrough_velocity_scalar: 5.
 
-putdown_time: 2.
-putdown_passthrough_height: .1
-putdown_passthrough_radius: .05
-putdown_passthrough_scalar: 100.
-putdown_passthrough_velocity_scalar: 1.
+putdown_time: 1.5
+putdown_passthrough_height: .075
+putdown_passthrough_radius: .02
+putdown_passthrough_scalar: 50.
+putdown_passthrough_velocity_scalar: 5.
 
 #sphere_obstacle_constraint_csv: .5,0,.1,.15
 sphere_obstacle_constraint_csv: 0,-.5,.1,.15
