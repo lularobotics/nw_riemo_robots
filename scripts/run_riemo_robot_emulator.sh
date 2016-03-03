@@ -16,7 +16,8 @@
 Q_INIT_CSV="2.0590,-0.1663,0.2239,-2.1501,1.6512,0.2339,0.69,0.69" # Modified to fit NW's setup
 
 JOINT_STATE_TOPIC=joint_states
-JOINT_TRAJECTORY_TOPIC=joint_trajectory_raw
+#JOINT_TRAJECTORY_TOPIC=joint_trajectory_raw
+JOINT_TRAJECTORY_TOPIC=joint_trajectory
 
 rosrun riemo_programs riemo_robot_emulator \
   --robot_package_name=nw_riemo_robots \
